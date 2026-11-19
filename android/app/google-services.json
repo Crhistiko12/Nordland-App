@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "640278827008",
+    "project_id": "nordland-30483",
+    "storage_bucket": "nordland-30483.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640278827008:android:64d3ac58a45257470f88e5",
+        "android_client_info": {
+          "package_name": "bo.com.nordland.nordland_puntos_venta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640278827008-954jkmvqe6ujrmq7n8gqijo5qdugdrhi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bo.com.nordland.nordland_puntos_venta",
+            "certificate_hash": "31c36a78b6139e050ccbc4544da2dd7857add054"
+          }
+        },
+        {
+          "client_id": "640278827008-adh79iaa6bu65i0f3njbnstn1bearo6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBaqLHorwpIo2HVJg3bnAHPNk5Ji9vrII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640278827008-adh79iaa6bu65i0f3njbnstn1bearo6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
