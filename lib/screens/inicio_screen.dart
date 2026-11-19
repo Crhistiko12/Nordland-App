@@ -6,8 +6,9 @@ import '../services/catalogo_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/boton_carrito_badge.dart';
 import '../widgets/categoria_card.dart';
-import '../widgets/nordland_logo.dart';
+import '../widgets/navegacion_nordland.dart';
 import '../widgets/producto_card.dart';
+import '../widgets/ubicacion_visitante.dart';
 import 'detalle_producto_screen.dart';
 import 'mapa_puntos_venta_screen.dart';
 
@@ -120,13 +121,11 @@ class _InicioScreenState extends State<InicioScreen> {
 
     return Scaffold(
       backgroundColor: NorlandColors.fondo,
-      appBar: AppBar(
-        backgroundColor: NorlandColors.blanco,
-        surfaceTintColor: Colors.transparent,
-        scrolledUnderElevation: 0,
-        title: const NordlandLogo(height: 27),
-        titleSpacing: 16,
-        actions: <Widget>[
+      drawer: const NordlandDrawer(seccionActual: SeccionNordland.inicio),
+      appBar: NorlandAppBar(
+        seccionActual: SeccionNordland.inicio,
+        conDrawer: true,
+        acciones: <Widget>[
           IconButton(
             tooltip: 'Puntos de venta',
             onPressed: _abrirMapa,
@@ -138,15 +137,7 @@ class _InicioScreenState extends State<InicioScreen> {
             correo: _correo,
             onCerrarSesion: _cerrarSesion,
           ),
-          const SizedBox(width: 6),
         ],
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(1),
-          child: SizedBox(
-            height: 1,
-            child: ColoredBox(color: NorlandColors.borde),
-          ),
-        ),
       ),
       body: Center(
         child: ConstrainedBox(
@@ -159,6 +150,8 @@ class _InicioScreenState extends State<InicioScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
+                      const UbicacionVisitante(),
+                      const SizedBox(height: 16),
                       _Saludo(nombre: _nombre),
                       const SizedBox(height: 16),
                       _Buscador(
