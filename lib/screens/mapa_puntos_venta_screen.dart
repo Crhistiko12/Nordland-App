@@ -11,7 +11,7 @@ import '../widgets/nordland_logo.dart';
 import '../widgets/pin_punto_venta.dart';
 import '../widgets/punto_venta_card.dart';
 import 'detalle_tienda_screen.dart';
-import 'registro_punto_venta_screen.dart';
+import 'registro_tienda_screen.dart';
 
 /// Pantalla principal: mapa y directorio de puntos de venta oficiales.
 class MapaPuntosVentaScreen extends StatefulWidget {
@@ -99,7 +99,7 @@ class _MapaPuntosVentaScreenState extends State<MapaPuntosVentaScreen> {
 
     await Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (BuildContext context) => const RegistroPuntoVentaScreen(),
+        builder: (BuildContext context) => const RegistroTiendaScreen(),
       ),
     );
 
@@ -301,7 +301,7 @@ class _CabeceraMapa extends StatelessWidget {
           ),
           IconButton(
             onPressed: onRegistro,
-            tooltip: 'Quiero ser punto de venta',
+            tooltip: 'Quiero ser Tienda Oficial',
             style: IconButton.styleFrom(
               backgroundColor: NorlandColors.verde,
               foregroundColor: NorlandColors.blanco,

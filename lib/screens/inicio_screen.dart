@@ -4,6 +4,7 @@ import '../models/producto.dart';
 import '../services/auth_service.dart';
 import '../services/catalogo_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/acciones_tienda_carrito.dart';
 import '../widgets/boton_carrito_badge.dart';
 import '../widgets/categoria_card.dart';
 import '../widgets/navegacion_nordland.dart';
@@ -154,6 +155,8 @@ class _InicioScreenState extends State<InicioScreen> {
                       const SizedBox(height: 16),
                       _Saludo(nombre: _nombre),
                       const SizedBox(height: 16),
+                      const AccionesTiendaCarrito(),
+                      const SizedBox(height: 20),
                       _Buscador(
                         controller: _buscadorController,
                         consulta: _consulta,

@@ -4,6 +4,7 @@ import 'package:material_ui/material_ui.dart';
 import '../screens/galeria_screen.dart';
 import '../screens/nosotros_screen.dart';
 import '../theme/app_theme.dart';
+import 'acciones_tienda_carrito.dart';
 import 'nordland_logo.dart';
 import 'qr_nordland_dialog.dart';
 
@@ -315,6 +316,24 @@ class NordlandDrawer extends StatelessWidget {
                       ),
                     ),
                   const SizedBox(height: 8),
+                  const Divider(),
+                  const SizedBox(height: 12),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Text(
+                      'TIENDA Y PEDIDOS',
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        letterSpacing: 0.8,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 4),
+                    child: AccionesTiendaCarrito(compacto: true),
+                  ),
+                  const SizedBox(height: 12),
                   const Divider(),
                   const SizedBox(height: 8),
                   ListTile(
